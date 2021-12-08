@@ -1,11 +1,10 @@
-build:
-    box:
-      id: docker-build-golang
-      username: dapurspl
-      password: Bandung#123
-    steps:
-      - script:
-        name: echo
+deploy:
+  steps:
+    - internal/docker-push:
+        username: dapurspl
+        password: Bandung#123
+        tag: my-amazing-tag
+        repository: turing/bar
 build:
   steps:
     - script:
