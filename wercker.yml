@@ -1,16 +1,12 @@
-box:
-  id: golang
-  ports:
-    - "5000"
-
-# Defining the dev pipeline
-dev:
-  steps:
-    - internal/watch:
-        code: |
-          go build ./...
-          ./source
-        reload: true
+build:
+    box:
+      id: guido/python
+      username: dapurspl
+      password: Bandung#123
+      tag: latest
+    steps:
+      - script:
+        name: echo
 build:
   steps:
     - script:
