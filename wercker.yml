@@ -4,8 +4,8 @@ deploy:
     - internal/docker-push:
         username: dapurspl
         password: Bandung#123
-        tag: my-amazing-tag
-        repository: turing/bar
+        tag: tagname
+        repository: dapurspl/docker-build-golang
 build:
   steps:
     - script:
