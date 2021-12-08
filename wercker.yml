@@ -1,4 +1,16 @@
-box: nodesource/trusty
+box:
+  id: golang
+  ports:
+    - "5000"
+
+# Defining the dev pipeline
+dev:
+  steps:
+    - internal/watch:
+        code: |
+          go build ./...
+          ./source
+        reload: true
 build:
   steps:
     - script:
