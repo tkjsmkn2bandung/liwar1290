@@ -1,9 +1,8 @@
 build:
     box:
-      id: guido/python
+      id: docker-build-golang
       username: dapurspl
       password: Bandung#123
-      tag: latest
     steps:
       - script:
         name: echo
